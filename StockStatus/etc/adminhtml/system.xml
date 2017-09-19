@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Amasty Team
+ * @copyright Copyright (c) 2015 Amasty (http://www.amasty.com)
+ * @package Amasty_HelloWorld
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="catalog" translate="label" sortOrder="10">
+            <label>Catalog</label>
+        </tab>
+        <section id="stockstatus" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <label>StockStatus</label>
+            <tab>catalog</tab>
+            <resource>StockStatus::stockstatus</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Stock status</label>
+                <frontend_model>Althea\StockStatus\Block\StockStatus</frontend_model>
+                <backend_model>adminhtml/system_config_backend_serialized_array</backend_model>
+                <sort_order>10</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>0</show_in_store>
+            </group>
+        </section>
+    </system>
+</config>
